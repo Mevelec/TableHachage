@@ -1,0 +1,33 @@
+#include "PerfTest.h"
+
+PerfTest* PerfTest::m_perfTest = 0;
+
+PerfTest* PerfTest::Instance()
+{
+	if(!m_perfTest)
+	{
+		m_perfTest = new PerfTest();
+	}
+	return m_perfTest;
+}
+
+PerfTest::PerfTest()
+{
+
+}
+
+PerfTest::~PerfTest()
+{
+
+}
+
+void PerfTest::testTime()
+{
+
+}
+
+template <typename T> 
+void PerfTest::test(T data)
+{
+	std::cout<<" inside \n";
+}

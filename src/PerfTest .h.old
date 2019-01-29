@@ -1,0 +1,34 @@
+#ifndef _PerfTest
+#define _PerfTest
+
+#include <chrono>
+#include <iostream>
+
+//template <typename T> 
+
+class PerfTest
+{
+	public :
+		static PerfTest* Instance();
+
+		template <typename T> 
+		void test(T data);
+		
+		void testTime();
+		void saveResult();
+		void clearResults();
+		void showResults();
+		void showGNuplot();
+
+	private :
+		PerfTest();
+		~PerfTest();
+
+		static PerfTest * m_perfTest;
+
+};
+
+
+
+
+#endif
